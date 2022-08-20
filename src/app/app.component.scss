@@ -1,3 +1,21 @@
 mat-toolbar {
   margin-bottom: 20px !important;
+
+  .logo {
+    width: 48px;
+    height: 48px;
+    margin-right: 20px;
+    cursor: pointer;
+  }
+
+  .brand {
+    margin-right: 20px;
+  }
+
+  button {
+    mat-icon.small {
+      font-size: 18px;
+      padding-top: 3px;
+    }
+  }
 }

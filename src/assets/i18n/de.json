@@ -1,6 +1,25 @@
 {
   "toolbar": {
-    "language": "Sprache"
+    "language": "Sprache",
+    "home": "Home",
+    "tutorials": {
+      "title": "Tutorials",
+      "basics": "Grundlagen",
+      "graphics": "Grafik",
+      "io": "Ein- & Ausgabe",
+      "sound": "Sound & Musik",
+      "gui": "Benutzeroberfläche",
+      "particles": "Partikel",
+      "meshes": "3D-Objekte"
+    },
+    "documentation": {
+      "title": "Dokumentation",
+      "keywords": "Schlüsselwörter",
+      "commands": "Befehle",
+      "constantsAndScancodes": "Konstanten und Scancodes",
+      "differencesToBlitzBasic": "Unterschiede zu BlitzBasic",
+      "migrationGuide": "Migrations-Guide"
+    }
   },
   "subtitle": "Spiele programmieren leicht gemacht",
   "home": {

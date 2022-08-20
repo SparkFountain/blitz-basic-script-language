@@ -9,6 +9,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { HttpClientModule } from '@angular/common/http';
 import { TranslocoRootModule } from './transloco-root.module';
+import { MatMenuModule } from '@angular/material/menu';
 
 @NgModule({
   declarations: [AppComponent],
@@ -21,6 +22,7 @@ import { TranslocoRootModule } from './transloco-root.module';
     MatButtonModule,
     HttpClientModule,
     TranslocoRootModule,
+    MatMenuModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

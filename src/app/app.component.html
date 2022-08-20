@@ -1,18 +1,82 @@
 <mat-toolbar color="primary">
+  <img class="logo" src="/assets/favicon/favicon-48.png" routerLink="/" />
+  <span class="brand">BlitzBasicScript</span>
+
+  <button mat-button routerLink="/">
+    <mat-icon class="small">home</mat-icon> {{ "toolbar.home" | transloco }}
+  </button>
+
+  <button mat-button [matMenuTriggerFor]="tutorials" routerLink="/tutorials">
+    <mat-icon class="small">school</mat-icon>
+    {{ "toolbar.tutorials.title" | transloco }}
+  </button>
+  <mat-menu #tutorials="matMenu">
+    <button mat-menu-item routerLink="/tutorials/basics">
+      {{ "toolbar.tutorials.basics" | transloco }}
+    </button>
+    <button mat-menu-item routerLink="/tutorials/graphics">
+      {{ "toolbar.tutorials.graphics" | transloco }}
+    </button>
+    <button mat-menu-item routerLink="/tutorials/io">
+      {{ "toolbar.tutorials.io" | transloco }}
+    </button>
+    <button mat-menu-item routerLink="/tutorials/sound">
+      {{ "toolbar.tutorials.sound" | transloco }}
+    </button>
+    <button mat-menu-item routerLink="/tutorials/gui">
+      {{ "toolbar.tutorials.gui" | transloco }}
+    </button>
+    <button mat-menu-item routerLink="/tutorials/particles">
+      {{ "toolbar.tutorials.particles" | transloco }}
+    </button>
+    <button mat-menu-item routerLink="/tutorials/meshes">
+      {{ "toolbar.tutorials.meshes" | transloco }}
+    </button>
+  </mat-menu>
+
+  <button
+    mat-button
+    [matMenuTriggerFor]="documentation"
+    routerLink="/documentation"
+  >
+    <mat-icon class="small">library_books</mat-icon>
+    {{ "toolbar.documentation.title" | transloco }}
+  </button>
+  <mat-menu #documentation="matMenu">
+    <button mat-menu-item routerLink="/documentation/keywords">
+      {{ "toolbar.documentation.keywords" | transloco }}
+    </button>
+    <button mat-menu-item routerLink="/documentation/commands">
+      {{ "toolbar.documentation.commands" | transloco }}
+    </button>
+    <button mat-menu-item routerLink="/documentation/constants-and-scancodes">
+      {{ "toolbar.documentation.constantsAndScancodes" | transloco }}
+    </button>
+    <button
+      mat-menu-item
+      routerLink="/documentation/differences-to-blitz-basic"
+    >
+      {{ "toolbar.documentation.differencesToBlitzBasic" | transloco }}
+    </button>
+    <button mat-menu-item routerLink="/documentation/migration-guide">
+      {{ "toolbar.documentation.migrationGuide" | transloco }}
+    </button>
+  </mat-menu>
+
+  <span class="spacer"></span>
+
+  <button mat-icon-button aria-label="Example icon-button with heart icon">
+    <mat-icon>favorite</mat-icon>
+  </button>
+  <button mat-icon-button aria-label="Example icon-button with share icon">
+    <mat-icon>share</mat-icon>
+  </button>
   <button
     mat-icon-button
     class="example-icon"
     aria-label="Example icon-button with menu icon"
   >
     <mat-icon>menu</mat-icon>
-  </button>
-  <span>BlitzBasicScript</span>
-  <span class="spacer"></span>
-  <button mat-icon-button aria-label="Example icon-button with heart icon">
-    <mat-icon>favorite</mat-icon>
-  </button>
-  <button mat-icon-button aria-label="Example icon-button with share icon">
-    <mat-icon>share</mat-icon>
   </button>
 </mat-toolbar>
 
