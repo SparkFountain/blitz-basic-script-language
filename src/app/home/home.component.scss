@@ -1,0 +1,27 @@
+@import "../../styles.scss";
+
+h1 {
+  color: $light-text;
+  text-align: center;
+}
+
+h2 {
+  color: $light-accent-text;
+  text-align: center;
+}
+
+.card-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+mat-card {
+  mat-card-title {
+    .icon-space {
+      padding-right: 10px;
+    }
+  }
+}
