@@ -10,7 +10,11 @@ import { GuiComponent } from './gui/gui.component';
 import { ParticlesComponent } from './particles/particles.component';
 import { MeshesComponent } from './meshes/meshes.component';
 import { OverviewComponent } from './overview/overview.component';
-
+import { MatCardModule } from '@angular/material/card';
+import { TranslocoModule } from '@ngneat/transloco';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { CloudComponent } from './cloud/cloud.component';
 
 @NgModule({
   declarations: [
@@ -21,11 +25,16 @@ import { OverviewComponent } from './overview/overview.component';
     GuiComponent,
     ParticlesComponent,
     MeshesComponent,
-    OverviewComponent
+    OverviewComponent,
+    CloudComponent,
   ],
   imports: [
     CommonModule,
-    TutorialsRoutingModule
-  ]
+    TutorialsRoutingModule,
+    MatCardModule,
+    TranslocoModule,
+    MatButtonModule,
+    MatIconModule,
+  ],
 })
-export class TutorialsModule { }
+export class TutorialsModule {}

@@ -9,6 +9,7 @@
       "io": "Ein- & Ausgabe",
       "sound": "Sound & Musik",
       "gui": "Benutzeroberfläche",
+      "cloud": "Cloud-Funktionen",
       "particles": "Partikel",
       "meshes": "3D-Objekte"
     },
@@ -24,8 +25,71 @@
   "subtitle": "Spiele programmieren leicht gemacht",
   "home": {
     "card": {
-      "title": "Du willst lernen, deinen Spielen den besonderen Kick zu geben?",
-      "subtitle": "Proggen wie ein Profi"
+      "title": "Proggen wie ein Profi",
+      "subtitle": "So gibst du deinen Spielen den besonderen Kick!"
     }
+  },
+  "tutorials": {
+    "basics": {
+      "title": "Grundlagen",
+      "subtitle": "Alles, was du unbedingt wissen musst",
+      "description": "<p>Programmieren lernen bedeutet, eine neue Sprache zu lernen. Und genau wie Deutsch oder Englisch ist auch <code>BlitzBasicScript</code> eine solche Sprache. Bevor du aber zum Goethe oder Shakespeare wirst, fang erst mal klein an mit dem simplen Satz '<b>Hallo Welt</b>'.</p><p>In diesem Abschnitt lernst du alle wichtigen Grundlagen, die du benötigst, um ein kreatives und interaktives Spiel zu entwickeln.</p>",
+      "chapters": {
+        "variables": {
+          "title": "Variablen"
+        },
+        "functions": {
+          "title": "Funktionen"
+        }
+      }
+    },
+    "graphics": {
+      "title": "Grafik",
+      "subtitle": "Mach dein Spiel zum Hingucker",
+      "description": "",
+      "chapters": {}
+    },
+    "io": {
+      "title": "Ein- & Ausgabe",
+      "subtitle": "Umschauen, Springen, Schießen – so wird's gemacht",
+      "description": "",
+      "chapters": {}
+    },
+    "sound": {
+      "title": "Sound & Musik",
+      "subtitle": "Für mehr Atmosphäre und Spannung",
+      "description": "",
+      "chapters": {}
+    },
+    "gui": {
+      "title": "Benutzeroberfläche",
+      "subtitle": "Nichts geht über Buttons, Menüs und Tabellen",
+      "description": "",
+      "chapters": {}
+    },
+    "cloud": {
+      "title": "Cloud-Funktionen",
+      "subtitle": "Inhalte kinderleicht laden und speichern",
+      "description": "",
+      "chapters": {}
+    },
+    "particles": {
+      "title": "Partikel",
+      "subtitle": "Lass es funkeln, blitzen und leuchten",
+      "description": "",
+      "chapters": {}
+    },
+    "meshes": {
+      "title": "3D-Objekte",
+      "subtitle": "Einstieg in richtige dreidimensionale Welten",
+      "description": "",
+      "chapters": {}
+    }
+  },
+  "documentation": {
+    "title": "Dokumentation",
+    "description": "Beschreibung",
+    "examples": "Beispiele",
+    "quests": "Missionen"
   }
 }

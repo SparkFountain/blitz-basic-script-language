@@ -1,0 +1,56 @@
+<div class="nav-container">
+  <mat-chip-list class="breadcrumbs">
+    <mat-chip
+      *ngFor="let breadcrumb of breadcrumbs"
+      [routerLink]="breadcrumb.path"
+    >
+      <mat-icon> {{ breadcrumb.icon }} </mat-icon>
+      {{ breadcrumb.label | transloco }}
+    </mat-chip>
+    <!-- <mat-chip [routerLink]="'/documentation/keywords'">
+      <mat-icon> key </mat-icon>
+      Schlüsselwörter
+    </mat-chip>
+    <mat-chip>
+      <mat-icon> all_inclusive </mat-icon>
+      Schleifen
+    </mat-chip> -->
+  </mat-chip-list>
+
+  <form class="search-form">
+    <mat-form-field appearance="outline">
+      <mat-label>Suchbegriff</mat-label>
+      <input
+        type="text"
+        placeholder="z. B. LoadImage"
+        aria-label="Search Term"
+        matInput
+        [formControl]="searchControl"
+        [matAutocomplete]="auto"
+        (input)="updateSearchAutoFill()"
+      />
+      <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+        <mat-option
+          *ngFor="let option of searchAutoFillOptions"
+          [value]="option"
+        >
+          {{ option }}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+  </form>
+
+  <mat-list>
+    <div mat-subheader>For-Schleife</div>
+    <mat-list-item>
+      <mat-icon mat-list-icon>chevron_right</mat-icon>
+      <div mat-line>For</div>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+    <div mat-subheader>While-Schleife</div>
+    <mat-list-item>
+      <mat-icon mat-list-icon>chevron_right</mat-icon>
+      <div mat-line>While</div>
+    </mat-list-item>
+  </mat-list>
+</div>

@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { BasicsComponent } from './basics/basics.component';
+import { CloudComponent } from './cloud/cloud.component';
 import { GraphicsComponent } from './graphics/graphics.component';
 import { GuiComponent } from './gui/gui.component';
 import { IoComponent } from './io/io.component';
@@ -33,6 +34,10 @@ const routes: Routes = [
   {
     path: 'gui',
     component: GuiComponent,
+  },
+  {
+    path: 'cloud',
+    component: CloudComponent,
   },
   {
     path: 'particles',

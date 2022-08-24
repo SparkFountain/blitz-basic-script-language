@@ -1,0 +1,17 @@
+:host {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+mat-card {
+  margin: 10px;
+  flex-grow: 1;
+  width: 25%;
+  min-height: 100px;
+
+  div[mat-card-avatar] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

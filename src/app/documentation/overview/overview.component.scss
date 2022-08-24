@@ -1,0 +1,20 @@
+@import "../../../styles.scss";
+
+:host {
+  display: flex;
+  flex-direction: row;
+}
+
+app-documentation-navigation {
+  width: 350px;
+  height: calc(100vh - 84px);
+
+  background: $dark-bg-lighter-5;
+}
+
+app-documentation-description {
+  width: 100%;
+  height: calc(100vh - 84px);
+
+  // background: $dark-bg-lighter-5;
+}
