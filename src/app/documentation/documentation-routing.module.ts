@@ -1,36 +1,31 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CommandsComponent } from './commands/commands.component';
-import { ConstantsAndScancodesComponent } from './constants-and-scancodes/constants-and-scancodes.component';
-import { DifferencesToBlitzBasicComponent } from './differences-to-blitz-basic/differences-to-blitz-basic.component';
-import { KeywordsComponent } from './keywords/keywords.component';
-import { MigrationGuideComponent } from './migration-guide/migration-guide.component';
-import { OverviewComponent } from './overview/overview.component';
+import { DocumentationComponent } from './documentation/documentation.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: OverviewComponent,
+    component: DocumentationComponent,
   },
   {
     path: 'keywords',
-    component: KeywordsComponent,
+    component: DocumentationComponent,
   },
   {
     path: 'commands',
-    component: CommandsComponent,
+    component: DocumentationComponent,
   },
   {
     path: 'constants-and-scancodes',
-    component: ConstantsAndScancodesComponent,
+    component: DocumentationComponent,
   },
   {
     path: 'differences-to-blitz-basic',
-    component: DifferencesToBlitzBasicComponent,
+    component: DocumentationComponent,
   },
   {
     path: 'migration-guide',
-    component: MigrationGuideComponent,
+    component: DocumentationComponent,
   },
 ];
 

@@ -2,12 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { DocumentationRoutingModule } from './documentation-routing.module';
-import { KeywordsComponent } from './keywords/keywords.component';
-import { CommandsComponent } from './commands/commands.component';
-import { ConstantsAndScancodesComponent } from './constants-and-scancodes/constants-and-scancodes.component';
-import { DifferencesToBlitzBasicComponent } from './differences-to-blitz-basic/differences-to-blitz-basic.component';
-import { MigrationGuideComponent } from './migration-guide/migration-guide.component';
-import { OverviewComponent } from './overview/overview.component';
 import { TranslocoModule } from '@ngneat/transloco';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { NavigationComponent } from './navigation/navigation.component';
@@ -23,17 +17,13 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatCardModule } from '@angular/material/card';
 import { AceModule, ACE_CONFIG } from 'ngx-ace-wrapper';
 import { DEFAULT_ACE_CONFIG } from '../app.module';
+import { DocumentationComponent } from './documentation/documentation.component';
 
 @NgModule({
   declarations: [
-    KeywordsComponent,
-    CommandsComponent,
-    ConstantsAndScancodesComponent,
-    DifferencesToBlitzBasicComponent,
-    MigrationGuideComponent,
-    OverviewComponent,
     NavigationComponent,
     DescriptionComponent,
+    DocumentationComponent,
   ],
   imports: [
     CommonModule,

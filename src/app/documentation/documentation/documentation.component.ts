@@ -1,17 +1,29 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, UrlSegment } from '@angular/router';
 import { DocItem } from 'src/app/interfaces/doc-item.interface';
+import { BreadcrumbService } from 'src/app/services/breadcrumb.service';
 
 @Component({
-  selector: 'app-overview',
-  templateUrl: './overview.component.html',
-  styleUrls: ['./overview.component.scss'],
+  selector: 'app-documentation',
+  templateUrl: './documentation.component.html',
+  styleUrls: ['./documentation.component.scss'],
 })
-export class OverviewComponent implements OnInit {
+export class DocumentationComponent implements OnInit {
   docItem!: DocItem | null;
 
-  constructor() {}
+  constructor(
+    private activatedRoute: ActivatedRoute,
+    private breadcrumbService: BreadcrumbService
+  ) {}
 
   ngOnInit(): void {
+    // get second and third level if exists in URL
+    const url: UrlSegment[] = this.activatedRoute.snapshot.url;
+    if (url.length === 1) {
+      this.breadcrumbService.setSecondLevel(url[0]);
+    }
+    console.log('>>> current URL', url);
+
     // TODO: should be null initially
     // this.docItem = null;
 
