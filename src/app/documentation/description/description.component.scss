@@ -1,7 +1,14 @@
 .description-container {
   padding: 0 30px;
 
-  mat-card.codebox {
-    width: calc(100% - 100px);
+  ace {
+    width: 100%;
+    height: calc(100vh - 134px - 64px);
+  }
+
+  h1,
+  h2 {
+    text-align: center;
+    margin-top: 10px;
   }
 }

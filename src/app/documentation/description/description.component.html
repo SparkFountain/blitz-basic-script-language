@@ -2,9 +2,17 @@
   <mat-tab-group mat-align-tabs="center">
     <mat-tab [label]="'documentation.description' | transloco">
       <h1>{{ docItem.name }}</h1>
+      <mat-card>
+        <mat-card-content [innerHTML]="docItem.description"></mat-card-content>
+      </mat-card>
     </mat-tab>
     <mat-tab [label]="'documentation.examples' | transloco">
-
+      <h2>{{ docItem.examples[0].title }}</h2>
+      <ace
+        [mode]="'text'"
+        [theme]="'github'"
+        [(value)]="docItem.examples[0].code"
+      ></ace>
     </mat-tab>
     <mat-tab [label]="'documentation.quests' | transloco">
       Here goes the QUESTS section.

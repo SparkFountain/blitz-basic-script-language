@@ -21,6 +21,8 @@ import { MatListModule } from '@angular/material/list';
 import { DescriptionComponent } from './description/description.component';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatCardModule } from '@angular/material/card';
+import { AceModule, ACE_CONFIG } from 'ngx-ace-wrapper';
+import { DEFAULT_ACE_CONFIG } from '../app.module';
 
 @NgModule({
   declarations: [
@@ -47,6 +49,13 @@ import { MatCardModule } from '@angular/material/card';
     MatListModule,
     MatTabsModule,
     MatCardModule,
+    AceModule,
+  ],
+  providers: [
+    {
+      provide: ACE_CONFIG,
+      useValue: DEFAULT_ACE_CONFIG,
+    },
   ],
 })
 export class DocumentationModule {}

@@ -21,7 +21,7 @@ export class OverviewComponent implements OnInit {
         'Diese Anweisung definiert eine Zählschleife, die mit Next abgeschlossen werden muss. Der Variable wird ein Startwert zugewiesen. Nach einem kompletten Durchlauf der Schleife bis Next wird der Wert der Variable erhöht. Dieser Befehl kann nur zusammen mit To und Next benutzt werden (zusätzlich sind Each und Step möglich).',
       examples: [
         {
-          title: '',
+          title: 'Zählen bis zehn',
           code: 'For x = 1 To 10\nPrint x\nNext',
         },
       ],

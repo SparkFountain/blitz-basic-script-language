@@ -10,6 +10,9 @@ import { MatButtonModule } from '@angular/material/button';
 import { HttpClientModule } from '@angular/common/http';
 import { TranslocoRootModule } from './transloco-root.module';
 import { MatMenuModule } from '@angular/material/menu';
+import { AceConfigInterface, AceModule, ACE_CONFIG } from 'ngx-ace-wrapper';
+
+export const DEFAULT_ACE_CONFIG: AceConfigInterface = {};
 
 @NgModule({
   declarations: [AppComponent],
@@ -23,8 +26,14 @@ import { MatMenuModule } from '@angular/material/menu';
     HttpClientModule,
     TranslocoRootModule,
     MatMenuModule,
+    AceModule,
   ],
-  providers: [],
+  providers: [
+    {
+      provide: ACE_CONFIG,
+      useValue: DEFAULT_ACE_CONFIG,
+    },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
