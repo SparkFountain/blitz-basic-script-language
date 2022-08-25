@@ -1,0 +1,11 @@
+;) [de] Zählen bis zehn
+;) [en] Count until ten
+For x = 1 To 10
+  Print x
+Next
+;//
+;) [de] Zweites Beispiel
+;) [en] Second Example
+For i=24 To -13 Step -1
+  x = x - i
+Next

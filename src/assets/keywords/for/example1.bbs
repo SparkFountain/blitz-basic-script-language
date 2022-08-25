@@ -1,4 +1,0 @@
-;) [de] Zählen bis zehn
-For x = 1 To 10
-  Print x
-Next

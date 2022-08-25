@@ -1,23 +1,23 @@
 export enum ThirdLevel {
   // Keywords
-  VARIABLES,
-  CONDITIONS,
-  LOOPS,
-  FUNCTIONS,
-  TYPES,
+  VARIABLES = 'variables',
+  CONDITIONS = 'conditions',
+  LOOPS = 'loops',
+  FUNCTIONS = 'functions',
+  TYPES = 'types',
 
   // Commands
-  MATHS,
-  STRINGS,
-  TIME_AND_RANDOM,
-  GUI,
-  GRAPHICS_2D,
-  GRAPHICS_3D,
-  SOUND,
-  IO,
-  CLOUD,
+  MATHS = 'maths',
+  STRINGS = 'strings',
+  TIME_AND_RANDOM = 'time-and-random',
+  GUI = 'gui',
+  GRAPHICS_2D = 'graphics-2d',
+  GRAPHICS_3D = 'graphics-3d',
+  SOUND = 'sound',
+  IO = 'io',
+  CLOUD = 'cloud',
 
-  // Constants and Scancodes
+  // Constants and Scancodess
 
   // Differences to BlitzBasic
 

@@ -94,6 +94,7 @@
     "bronze": "Bronze",
     "silver": "Silber",
     "gold": "Gold",
-    "yourMission": "Deine Mission:"
+    "yourMission": "Deine Mission:",
+    "unnamedCodeExample": "(Unbenanntes Codebeispiel)"
   }
 }

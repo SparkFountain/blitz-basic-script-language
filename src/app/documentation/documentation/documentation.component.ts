@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, UrlSegment } from '@angular/router';
+import { forkJoin } from 'rxjs';
+import { SecondLevel } from 'src/app/enums/second-level.enum';
+import { ThirdLevel } from 'src/app/enums/third-level.enum';
 import { DocItem } from 'src/app/interfaces/doc-item.interface';
 import { BreadcrumbService } from 'src/app/services/breadcrumb.service';
 import { DocsService } from 'src/app/services/docs.service';
@@ -26,20 +29,26 @@ export class DocumentationComponent implements OnInit {
     }
     console.log('>>> current URL', url);
 
-    // TODO: should be null initially
-    // this.docItem = null;
+    this.docItem = null;
 
-    this.docItem = {
-      name: 'For',
-      description:
-        'Diese Anweisung definiert eine Zählschleife, die mit Next abgeschlossen werden muss. Der Variable wird ein Startwert zugewiesen. Nach einem kompletten Durchlauf der Schleife bis Next wird der Wert der Variable erhöht. Dieser Befehl kann nur zusammen mit To und Next benutzt werden (zusätzlich sind Each und Step möglich).',
-      examples: [
-        {
-          title: 'Zählen bis zehn',
-          code: 'For x = 1 To 10\nPrint x\nNext',
-        },
-      ],
-      quests: [],
-    };
+    forkJoin({
+      description: this.docsService.getDescription$(
+        SecondLevel.KEYWORDS,
+        ThirdLevel.LOOPS,
+        'For'
+      ),
+      examples: this.docsService.getCodeExamples$(
+        SecondLevel.KEYWORDS,
+        ThirdLevel.LOOPS,
+        'For'
+      ),
+    }).subscribe(({ description, examples }) => {
+      this.docItem = {
+        name: 'For',
+        description,
+        examples,
+        quests: [],
+      };
+    });
   }
 }
