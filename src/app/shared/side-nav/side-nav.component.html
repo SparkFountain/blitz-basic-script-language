@@ -1,22 +1,16 @@
 <div class="nav-container">
+  <!-- BREADCRUMBS -->
   <mat-chip-list class="breadcrumbs">
     <mat-chip
       *ngFor="let breadcrumb of breadcrumbs"
       [routerLink]="breadcrumb.path"
     >
-      <mat-icon> {{ breadcrumb.icon }} </mat-icon>
+      <mat-icon> {{ breadcrumb.icon ?? "lens" }} </mat-icon>
       {{ breadcrumb.label | transloco }}
     </mat-chip>
-    <!-- <mat-chip [routerLink]="'/documentation/keywords'">
-      <mat-icon> key </mat-icon>
-      Schlüsselwörter
-    </mat-chip>
-    <mat-chip>
-      <mat-icon> all_inclusive </mat-icon>
-      Schleifen
-    </mat-chip> -->
   </mat-chip-list>
 
+  <!-- SEARCH FORM -->
   <form class="search-form">
     <mat-form-field appearance="outline">
       <mat-label>Suchbegriff</mat-label>
@@ -40,17 +34,15 @@
     </mat-form-field>
   </form>
 
+  <!-- TOPICS -->
   <mat-list>
-    <div mat-subheader>For-Schleife</div>
-    <mat-list-item>
-      <mat-icon mat-list-icon>chevron_right</mat-icon>
-      <div mat-line>For</div>
-    </mat-list-item>
-    <mat-divider></mat-divider>
-    <div mat-subheader>While-Schleife</div>
-    <mat-list-item>
-      <mat-icon mat-list-icon>chevron_right</mat-icon>
-      <div mat-line>While</div>
-    </mat-list-item>
+    <ng-container *ngFor="let topic of topics; let i = index">
+      <mat-divider *ngIf="i > 0"></mat-divider>
+      <div mat-subheader>{{ topic.label ?? "unknown" }}</div>
+      <mat-list-item *ngFor="let section of topic.sections">
+        <mat-icon mat-list-icon>chevron_right</mat-icon>
+        <div>{{ section.label }}</div>
+      </mat-list-item>
+    </ng-container>
   </mat-list>
 </div>

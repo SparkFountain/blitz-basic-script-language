@@ -1,0 +1,13 @@
+<div class="container">
+  <mat-tab-group mat-align-tabs="center">
+    <mat-tab [label]="tabLabels[0]">
+      <ng-content select="[first]"></ng-content>
+    </mat-tab>
+    <mat-tab [label]="tabLabels[1]">
+      <ng-content select="[second]"></ng-content>
+    </mat-tab>
+    <mat-tab [label]="tabLabels[2]">
+      <ng-content select="[third]"></ng-content>
+    </mat-tab>
+  </mat-tab-group>
+</div>

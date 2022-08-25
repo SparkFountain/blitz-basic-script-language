@@ -1,14 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { BasicsComponent } from './basics/basics.component';
-import { CloudComponent } from './cloud/cloud.component';
-import { GraphicsComponent } from './graphics/graphics.component';
-import { GuiComponent } from './gui/gui.component';
-import { IoComponent } from './io/io.component';
-import { MeshesComponent } from './meshes/meshes.component';
+import { LessonComponent } from './lesson/lesson.component';
 import { OverviewComponent } from './overview/overview.component';
-import { ParticlesComponent } from './particles/particles.component';
-import { SoundComponent } from './sound/sound.component';
 
 const routes: Routes = [
   {
@@ -17,35 +10,35 @@ const routes: Routes = [
   },
   {
     path: 'basics',
-    component: BasicsComponent,
+    component: LessonComponent,
   },
   {
     path: 'graphics',
-    component: GraphicsComponent,
+    component: LessonComponent,
   },
   {
     path: 'io',
-    component: IoComponent,
+    component: LessonComponent,
   },
   {
     path: 'sound',
-    component: SoundComponent,
+    component: LessonComponent,
   },
   {
     path: 'gui',
-    component: GuiComponent,
+    component: LessonComponent,
   },
   {
     path: 'cloud',
-    component: CloudComponent,
+    component: LessonComponent,
   },
   {
     path: 'particles',
-    component: ParticlesComponent,
+    component: LessonComponent,
   },
   {
     path: 'meshes',
-    component: MeshesComponent,
+    component: LessonComponent,
   },
 ];
 

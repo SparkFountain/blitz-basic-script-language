@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MeshesComponent } from './meshes.component';
+import { ContentTabberComponent } from './content-tabber.component';
 
-describe('MeshesComponent', () => {
-  let component: MeshesComponent;
-  let fixture: ComponentFixture<MeshesComponent>;
+describe('ContentTabberComponent', () => {
+  let component: ContentTabberComponent;
+  let fixture: ComponentFixture<ContentTabberComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MeshesComponent ]
+      declarations: [ ContentTabberComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(MeshesComponent);
+    fixture = TestBed.createComponent(ContentTabberComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

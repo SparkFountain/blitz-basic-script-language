@@ -1,30 +1,27 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { SecondLevel } from 'src/app/enums/second-level.enum';
 import { ThirdLevel } from 'src/app/enums/third-level.enum';
 import { Breadcrumb } from 'src/app/interfaces/breadcrumb.interface';
-import { BreadcrumbService } from 'src/app/services/breadcrumb.service';
+import { Topic } from 'src/app/interfaces/topic.interface';
 import { SearchService } from 'src/app/services/search.service';
 
 @Component({
-  selector: 'app-documentation-navigation',
-  templateUrl: './navigation.component.html',
-  styleUrls: ['./navigation.component.scss'],
+  selector: 'app-side-nav',
+  templateUrl: './side-nav.component.html',
+  styleUrls: ['./side-nav.component.scss'],
 })
-export class NavigationComponent implements OnInit {
-  breadcrumbs!: Breadcrumb[];
+export class SideNavComponent implements OnInit {
+  @Input() breadcrumbs!: Breadcrumb[];
+  @Input() topics!: Topic[];
 
   searchControl!: FormControl;
   searchAutoFillOptions!: string[];
 
-  constructor(
-    private breadcrumbService: BreadcrumbService,
-    private searchService: SearchService
-  ) {}
+  constructor(private searchService: SearchService) {}
 
   ngOnInit(): void {
     // Breadcrumbs
-    this.breadcrumbs = this.breadcrumbService.getBreadcrumbs();
 
     this.searchControl = new FormControl();
     this.searchAutoFillOptions = [

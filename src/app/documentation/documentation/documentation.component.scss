@@ -5,16 +5,89 @@
   flex-direction: row;
 }
 
-app-documentation-navigation {
+app-side-nav {
   width: 350px;
   height: calc(100vh - 84px);
 
   background: $dark-bg-lighter-5;
 }
 
-app-documentation-description {
+app-content-tabber {
   width: 100%;
   height: calc(100vh - 84px);
 
   // background: $dark-bg-lighter-5;
+}
+
+.code-toolbar {
+  width: 100%;
+  height: 64px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  .code-buttons {
+    width: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .code-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    mat-icon {
+      color: $light-text;
+      // font-size: 32px;
+    }
+  }
+}
+
+ace {
+  width: 100%;
+  height: calc(100vh - 134px - 64px);
+
+  &.quest-editor {
+    width: 100px;
+    height: 100px;
+    margin-left: 20px;
+  }
+}
+
+h1,
+h2 {
+  text-align: center;
+  margin-top: 10px;
+}
+
+h3 {
+  color: $dark-text;
+  font-size: 20px;
+}
+
+.question {
+  background: var(--accent-darker-color);
+}
+
+.badge {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &.bronze {
+    color: #cd7f32;
+  }
+
+  &.silver {
+    color: silver;
+  }
+
+  &.gold {
+    color: gold;
+  }
 }

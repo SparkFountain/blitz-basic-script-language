@@ -1,5 +1,5 @@
 export interface Breadcrumb {
   label: string;
-  icon: string;
+  icon?: string;
   path?: string;
 }

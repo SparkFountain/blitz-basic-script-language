@@ -30,6 +30,9 @@
     }
   },
   "tutorials": {
+    "interactive": "Interaktiv",
+    "video": "Video",
+    "missions": "Missionen",
     "basics": {
       "title": "Grundlagen",
       "subtitle": "Alles, was du unbedingt wissen musst",

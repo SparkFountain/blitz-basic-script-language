@@ -1,0 +1,15 @@
+@import "../../../styles.scss";
+
+:host {
+  display: flex;
+  flex-direction: row;
+}
+
+app-side-nav {
+  width: 350px;
+  height: calc(100vh - 84px);
+
+  background: $dark-bg-lighter-5;
+}
+
+
