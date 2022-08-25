@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, UrlSegment } from '@angular/router';
 import { DocItem } from 'src/app/interfaces/doc-item.interface';
 import { BreadcrumbService } from 'src/app/services/breadcrumb.service';
+import { DocsService } from 'src/app/services/docs.service';
 
 @Component({
   selector: 'app-documentation',
@@ -13,14 +14,15 @@ export class DocumentationComponent implements OnInit {
 
   constructor(
     private activatedRoute: ActivatedRoute,
-    private breadcrumbService: BreadcrumbService
+    private breadcrumbService: BreadcrumbService,
+    private docsService: DocsService
   ) {}
 
   ngOnInit(): void {
     // get second and third level if exists in URL
     const url: UrlSegment[] = this.activatedRoute.snapshot.url;
     if (url.length === 1) {
-      this.breadcrumbService.setSecondLevel(url[0]);
+      this.breadcrumbService.setSecondLevel(url[0].path);
     }
     console.log('>>> current URL', url);
 

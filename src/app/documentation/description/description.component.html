@@ -7,7 +7,26 @@
       </mat-card>
     </mat-tab>
     <mat-tab [label]="'documentation.examples' | transloco">
-      <h2>{{ docItem.examples[0].title }}</h2>
+      <div class="code-toolbar">
+        <div class="code-buttons">
+          <button mat-icon-button color="accent">
+            <mat-icon>play_circle</mat-icon>
+          </button>
+          <button mat-icon-button color="accent">
+            <mat-icon>vertical_align_bottom</mat-icon>
+          </button>
+        </div>
+        <div class="code-title">
+          <button mat-icon-button>
+            <mat-icon>chevron_left</mat-icon>
+          </button>
+          <h2>{{ docItem.examples[0].title }}</h2>
+          <button mat-icon-button>
+            <mat-icon>chevron_right</mat-icon>
+          </button>
+        </div>
+        <div class="code-buttons">&nbsp;</div>
+      </div>
       <ace
         [mode]="'text'"
         [theme]="'github'"
@@ -15,7 +34,69 @@
       ></ace>
     </mat-tab>
     <mat-tab [label]="'documentation.quests' | transloco">
-      Here goes the QUESTS section.
+      <mat-stepper [linear]="true" #stepper>
+        <mat-step
+          [stepControl]="firstFormGroup"
+          [label]="'documentation.bronze' | transloco"
+        >
+          <form [formGroup]="secondFormGroup">
+            <mat-card class="question">
+              <mat-card-header>
+                <div mat-card-avatar class="badge bronze">
+                  <mat-icon>verified</mat-icon>
+                </div>
+                <mat-card-title>
+                  {{ "documentation.yourMission" | transloco }}
+                </mat-card-title>
+                <mat-card-subtitle
+                  >Was tut der folgende Code?</mat-card-subtitle
+                >
+              </mat-card-header>
+              <mat-card-content>
+                <ace
+                  class="quest-editor"
+                  [value]="'test'"
+                  [disabled]="true"
+                ></ace>
+              </mat-card-content>
+            </mat-card>
+
+            <!-- <div class="question">
+              <h3>{{ "documentation.yourMission" | transloco }}</h3>
+              Was tut der folgende Code?
+            </div>
+            <ace class="quest-editor" [value]="'test'" [disabled]="true"></ace> -->
+          </form>
+        </mat-step>
+        <mat-step
+          [stepControl]="secondFormGroup"
+          [label]="'documentation.silver' | transloco"
+        >
+          <form [formGroup]="secondFormGroup">
+            <mat-form-field appearance="fill">
+              <mat-label>Address</mat-label>
+              <input
+                matInput
+                formControlName="secondCtrl"
+                placeholder="Ex. 1 Main St, New York, NY"
+                required
+              />
+            </mat-form-field>
+            <div>
+              <button mat-button matStepperPrevious>Back</button>
+              <button mat-button matStepperNext>Next</button>
+            </div>
+          </form>
+        </mat-step>
+        <mat-step>
+          <ng-template matStepLabel>Done</ng-template>
+          <p>You are now done.</p>
+          <div>
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button (click)="stepper.reset()">Reset</button>
+          </div>
+        </mat-step>
+      </mat-stepper>
     </mat-tab>
   </mat-tab-group>
 </div>

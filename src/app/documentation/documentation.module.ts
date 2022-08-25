@@ -18,6 +18,8 @@ import { MatCardModule } from '@angular/material/card';
 import { AceModule, ACE_CONFIG } from 'ngx-ace-wrapper';
 import { DEFAULT_ACE_CONFIG } from '../app.module';
 import { DocumentationComponent } from './documentation/documentation.component';
+import { MatStepperModule } from '@angular/material/stepper';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -39,6 +41,8 @@ import { DocumentationComponent } from './documentation/documentation.component'
     MatListModule,
     MatTabsModule,
     MatCardModule,
+    MatStepperModule,
+    MatButtonModule,
     AceModule,
   ],
   providers: [

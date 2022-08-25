@@ -90,6 +90,10 @@
     "title": "Dokumentation",
     "description": "Beschreibung",
     "examples": "Beispiele",
-    "quests": "Missionen"
+    "quests": "Missionen",
+    "bronze": "Bronze",
+    "silver": "Silber",
+    "gold": "Gold",
+    "yourMission": "Deine Mission:"
   }
 }

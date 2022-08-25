@@ -68,19 +68,19 @@
 
   <span class="spacer"></span>
 
-  <button mat-icon-button aria-label="Example icon-button with heart icon">
+  <button mat-icon-button class="red">
     <mat-icon>favorite</mat-icon>
   </button>
-  <button mat-icon-button aria-label="Example icon-button with share icon">
+  <button mat-icon-button color="accent">
     <mat-icon>share</mat-icon>
   </button>
-  <button
-    mat-icon-button
-    class="example-icon"
-    aria-label="Example icon-button with menu icon"
-  >
-    <mat-icon>menu</mat-icon>
+  <button mat-icon-button [matMenuTriggerFor]="language">
+    <mat-icon class="small">translate</mat-icon>
   </button>
+  <mat-menu #language="matMenu">
+    <button mat-menu-item (click)="chooseLanguage('de')">Deutsch</button>
+    <button mat-menu-item (click)="chooseLanguage('en')">English</button>
+  </mat-menu>
 </mat-toolbar>
 
 <main>
