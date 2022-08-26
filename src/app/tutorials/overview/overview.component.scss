@@ -8,6 +8,7 @@ mat-card {
   flex-grow: 1;
   width: 25%;
   min-height: 100px;
+  cursor: pointer;
 
   div[mat-card-avatar] {
     display: flex;

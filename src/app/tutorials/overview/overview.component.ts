@@ -3,7 +3,6 @@ import { Component, OnInit } from '@angular/core';
 interface TutorialSection {
   name: string;
   icon: string;
-  chapters: string[];
 }
 
 @Component({
@@ -21,45 +20,34 @@ export class OverviewComponent implements OnInit {
       {
         name: 'basics',
         icon: 'bolt',
-        chapters: [
-          'variables',
-          'functions'
-        ],
       },
       {
         name: 'graphics',
         icon: 'palette',
-        chapters: [],
       },
       {
         name: 'io',
         icon: 'keyboard',
-        chapters: [],
       },
       {
         name: 'sound',
         icon: 'headphones',
-        chapters: [],
       },
       {
         name: 'gui',
         icon: 'widgets',
-        chapters: [],
       },
       {
         name: 'cloud',
         icon: 'cloud',
-        chapters: [],
       },
       {
         name: 'particles',
         icon: 'flare',
-        chapters: [],
       },
       {
         name: 'meshes',
         icon: 'view_in_ar',
-        chapters: [],
       },
     ];
   }

@@ -3,24 +3,16 @@
     <div mat-card-avatar>
       <mat-icon>{{ section.icon }}</mat-icon>
     </div>
-    <mat-card-title>{{
-      "tutorials." + section.name + ".title" | transloco
-    }}</mat-card-title>
-    <mat-card-subtitle>{{
-      "tutorials." + section.name + ".subtitle" | transloco
-    }}</mat-card-subtitle>
+    <mat-card-title>
+      {{ 'tutorials.' + section.name + '.title' | transloco }}
+    </mat-card-title>
+    <mat-card-subtitle>
+      {{ 'tutorials.' + section.name + '.subtitle' | transloco }}
+    </mat-card-subtitle>
   </mat-card-header>
   <mat-card-content>
     <div
       [innerHTML]="'tutorials.' + section.name + '.description' | transloco"
     ></div>
   </mat-card-content>
-  <mat-card-actions>
-    <button mat-stroked-button *ngFor="let chapter of section.chapters">
-      {{
-        "tutorials." + section.name + ".chapters." + chapter + ".title"
-          | transloco
-      }}
-    </button>
-  </mat-card-actions>
 </mat-card>

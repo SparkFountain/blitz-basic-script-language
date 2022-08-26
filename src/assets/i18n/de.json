@@ -49,43 +49,43 @@
     "graphics": {
       "title": "Grafik",
       "subtitle": "Mach dein Spiel zum Hingucker",
-      "description": "",
+      "description": "<p>Das mit Abstand Wichtigste an einem Top Game ist die optische Wirkung. Nur wenn die Bilder, Animationen und Texte aufeinander abgestimmt sind, wollen die Leute dein Spiel zocken.</p><p>In diesem Abschnitt lernst du Befehle zur Darstellung grafischer (2D-)Elemente kennen. Außerdem erfährst du ein paar Grundlagen zur Entwicklung eines stimmigen Designs und wie du beispielsweise die Farbpalette bewusst einsetzt.</p>",
       "chapters": {}
     },
     "io": {
       "title": "Ein- & Ausgabe",
       "subtitle": "Umschauen, Springen, Schießen – so wird's gemacht",
-      "description": "",
+      "description": "<p>Um deinen Games Leben einzuhauchen, muss der Spieler in der Lage sein, mit den Spielelementen zu interagieren. Dazu eignen sich – ganz klassisch – Maus und Tastatur, es werden aber auch Gamepads und Joysticks unterstützt.</p><p>In diesem Abschnitt erfährst du, wie Tastatur- und Mauseingaben abgefangen und verarbeitet werden und wie du mit Gamepads und Joysticks umgehen kannst.</p>",
       "chapters": {}
     },
     "sound": {
       "title": "Sound & Musik",
       "subtitle": "Für mehr Atmosphäre und Spannung",
-      "description": "",
+      "description": "<p>Auch wenn nicht jedes Spiel einen epischen Soundtrack benötigt, so sollten deine Spielelemente doch Geräusche machen, wenn sie benutzt werden oder sich bewegen. Ein Stein, der auf den Boden fällt, klingt je nach Untergrund dumpf oder hell.</p><p>Hier bekommst du einen Einblick in die Wunderwelt der Akustik. Setze Soundeffekte bewusst ein und erfahre, wie ein bisschen stimmige Musik für Spannung und Abwechslung sorgt.</p>",
       "chapters": {}
     },
     "gui": {
       "title": "Benutzeroberfläche",
       "subtitle": "Nichts geht über Buttons, Menüs und Tabellen",
-      "description": "",
+      "description": "<p>Du willst den aktuellen Punktestand anzeigen? Wie viele Leben dein Held noch hat? Oder brauchst du einfach ein paar Buttons für deine Dialoge im Adventure oder Rollenspiel?</p><p>Es gibt tausend Gründe, warum sich grafische Benutzeroberflächen durchgesetzt haben und bis heute verwendet werden. Hier lernst du, was für Element dazu gehören – und wie du sie gewinnbringend in deinen Spielen einsetzt.</p>",
       "chapters": {}
     },
     "cloud": {
       "title": "Cloud-Funktionen",
       "subtitle": "Inhalte kinderleicht laden und speichern",
-      "description": "",
+      "description": "<p>Ohne Cloud ist dein Spiel nur eine Momentaufnahme. Was willst du tun, um den Spielfortschritt (wie zum Beispiel absolvierte Levels oder Errungenschaften) zu sichern, damit deine Spieler später dort weitermachen können, wo sie zuletzt aufgehört haben?</p><p>Genau dafür ist die Cloud gemacht. In diesem Abschnitt wird dir beigebracht, Spielstände und andere Daten zu laden, zu speichern und zu personalisieren.</p>",
       "chapters": {}
     },
     "particles": {
       "title": "Partikel",
       "subtitle": "Lass es funkeln, blitzen und leuchten",
-      "description": "",
+      "description": "<p><code>BlitzBasicScript</code> wurde zur Entwicklung von Spielen konzipiert – nicht für langweilige Büroanwendungen! Gönne deinen Spielern das gewisse Extra: Lass ein Feuerwerk aufsteigen beim Gewinnen oder den Bildschirm dunkelrot flackern, wenn der Hauptcharakter angegriffen wird.</p><p>Mithilfe einfacher Partikeleffekte gibst du deinen Spielern ein optisches Feedback, wodurch das Game an Tiefe gewinnt. Die Befehle sind kinderleicht und die Wirkung ist faszinierend!</p>",
       "chapters": {}
     },
     "meshes": {
       "title": "3D-Objekte",
-      "subtitle": "Einstieg in richtige dreidimensionale Welten",
-      "description": "",
+      "subtitle": "Erschaffe dein virtuelles Filmstudio",
+      "description": "<p>Wie cool wäre es eigentlich, wenn deine Spiele nicht mehr nur von der Seite oder von oben dargestellt würden, sondern richtig dreidimensional? Nur ein Traum, glaubst du? Mitnichten!</p><p>Hier lernst du die Grundlagen über 3D-Spiele kennen und erfährst, wie man in der 3D-Welt Objekte modelliert und texturiert.</p><p><b>Aber Achtung:</b> Diese Lektion erfordert Ausdauer und du benötigst unbedingt Grundkenntnisse in der Spieleprogrammierung!</p>",
       "chapters": {}
     }
   },
